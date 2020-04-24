@@ -1038,6 +1038,13 @@ export interface TeamStylesResponse extends PaginationResponse {
   readonly styles: ReadonlyArray<FullStyleMetadata>;
 }
 
-export interface FileStylesResponse extends PaginationResponse {
+export interface FileStylesResponse extends MetaResponse<FileStylesMeta>{
+}
+
+export interface FileStylesMeta {
   readonly styles: ReadonlyArray<FullStyleMetadata>;
+}
+
+export interface MetaResponse<T> {
+  readonly meta: T
 }
